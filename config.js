@@ -6,7 +6,7 @@
  */
 window.ALICE_CONFIG = {
     restaurantName: "Alice Restaurant",
-    phone: "+39 327 400 5251",
+    phone: "+39 XXX XXX XXXX",
     email: "",
     address: "Via Virgilio",
     locality: "87075 Trebisacce (CS)",

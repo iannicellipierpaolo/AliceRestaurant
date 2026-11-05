@@ -1,7 +1,3 @@
-/* ==========================================================
-   ALICE RESTAURANT — INTERAZIONI
-   JavaScript nativo: nessuna libreria necessaria.
-   ========================================================== */
 (() => {
     "use strict";
 
@@ -14,7 +10,6 @@
     const menuDialog = document.querySelector("#menu-dialog");
     const photoDialog = document.querySelector("#photo-dialog");
 
-    // DATI DEL RISTORANTE
     const setText = (selector, value) => {
         if (typeof value !== "string" || !value.trim()) return;
         document.querySelectorAll(selector).forEach((element) => {
@@ -116,7 +111,6 @@
 
     mobileViewport.addEventListener("change", closeNavigation);
 
-    // FINESTRE ACCESSIBILI: FOCUS, ESC, CHIUSURA ESTERNA
     let dialogTrigger = null;
 
     const openDialog = (dialog, trigger) => {
@@ -137,6 +131,13 @@
             photo.alt = button.querySelector("img").alt;
             document.querySelector("#photo-caption").textContent = button.dataset.caption;
             openDialog(photoDialog, button);
+        });
+    });
+
+    document.querySelectorAll("[data-open-editorial]").forEach((button) => {
+        button.addEventListener("click", () => {
+            const dialog = document.getElementById(button.dataset.openEditorial);
+            if (dialog) openDialog(dialog, button);
         });
     });
 
@@ -174,7 +175,6 @@
         });
     });
 
-    // VIDEO DECORATIVO DELLA CUCINA — ATTIVO SOLO CON UN FILE CONFIGURATO
     const cuisine = document.querySelector(".cuisine");
     const cuisineVideo = document.querySelector(".cuisine-video");
     const videoBackground = document.querySelector(".cuisine-background");
@@ -243,7 +243,7 @@
         }
     }
 
-    // COMPARSA DELLE SEZIONI ALLO SCORRIMENTO
+    
     const revealElements = document.querySelectorAll(".reveal");
 
     if (!motionPreference.matches && "IntersectionObserver" in window) {
@@ -268,7 +268,7 @@
         }
     });
 
-    // PARALLASSE LEGGERO E LINEA DI AVANZAMENTO
+
     const hero = document.querySelector(".hero");
     const heroImage = document.querySelector(".hero-image");
     const progress = document.querySelector(".scroll-progress");

@@ -24,6 +24,7 @@
         <link rel="stylesheet" href="style.css">
         <script src="config.js" defer></script>
         <script src="script.js" defer></script>
+        <script src="startup.js"></script>
     </head>
     <body>
         <a class="skip-link" href="#ristorante">Vai al contenuto</a>
@@ -79,6 +80,7 @@
                 <div class="restaurant-copy">
                     <p class="eyebrow reveal"><span class="section-number">01</span> Il ristorante <span class="fine-line"></span></p>
                     <h1 id="restaurant-title" class="reveal">Un tavolo<br>con <em>vista.</em></h1>
+                    <p class="lead reveal">Il mare davanti.<br>Il piacere di stare a tavola.</p>
                     <p class="body-copy reveal">Uno sguardo su Trebisacce, l’orizzonte dello Ionio e il tempo di godersi ogni assaggio. Da Alice, il panorama accompagna i tuoi momenti a tavola.</p>
                     <a class="text-link reveal" href="#cucina">Scopri la nostra cucina <span aria-hidden="true">↘</span></a>
                     <span class="restaurant-coordinate" aria-hidden="true">CALABRIA, VISTA MARE.</span>
@@ -93,7 +95,7 @@
                         alt="La sala di Alice con tavoli apparecchiati, sedie bianche e la grande vetrata sul paese e sul mare."
                         loading="lazy"
                     >
-                
+                    
                 </figure>
             </section>
 
@@ -137,7 +139,7 @@
                             >
                             <span class="image-plus" aria-hidden="true">↗</span>
                         </button>
-                        <figcaption><span></span><span class="dish-index">01 /</span></figcaption>
+                       <span class="dish-index">01 /</span>
                     </figure>
                     <figure class="dish reveal">
                         <button
@@ -158,7 +160,7 @@
                             >
                             <span class="image-plus" aria-hidden="true">↗</span>
                         </button>
-                        <figcaption><span></span><span class="dish-index">02 /</span></figcaption>
+                        <span class="dish-index">02 /</span>
                     </figure>
                     <figure class="dish reveal">
                         <button
@@ -179,7 +181,7 @@
                             >
                             <span class="image-plus" aria-hidden="true">↗</span>
                         </button>
-                        <figcaption><span></span><span class="dish-index">03 /</span></figcaption>
+                        <span class="dish-index">03 /</span>
                     </figure>
                 </div>
             </section>
@@ -197,14 +199,14 @@
                     </div>
                     <div class="contact-book reveal">
                         <p>Il prossimo momento speciale<br>comincia da un tavolo.</p>
-                        <a class="button button-outline" href="tel:+393274005251" data-phone-link>Prenota un tavolo <span aria-hidden="true">↗</span></a>
+                        <a class="button button-outline" href="tel:+39XXXXXXXXXXX" data-phone-link>Prenota un tavolo <span aria-hidden="true">↗</span></a>
                     </div>
                 </div>
 
                 <div class="contact-grid">
                     <div class="contact-column reveal">
                         <h3>Contatti</h3>
-                        <a class="contact-phone" href="tel:+393274005251" data-phone-link data-phone-text>+39 327 400 5251</a>
+                        <a class="contact-phone" href="tel:+39 XXX-XXX-XXXX" data-phone-link data-phone-text>+39 327 400 5251</a>
                         <a data-email-row hidden></a>
                         <div class="hours" data-hours></div>
                         <p class="contact-detail" data-hours-fallback>Per disponibilità e orari,<br>contattaci telefonicamente.</p>
@@ -251,6 +253,24 @@
             </section>
         </main>
 
+        <!-- FASCIA DEMO EDITORIALE -->
+        <aside class="demo-banner" aria-label="Informazioni sulla demo">
+            <div>
+                <span class="demo-banner-tag">PROPOSTA DIGITALE</span>
+                <p>Una nuova prospettiva per Alice Restaurant.</p>
+                <small>Demo indipendente · Proposta da concordare con i titolari</small>
+            </div>
+            <div class="demo-banner-actions">
+                <button type="button" data-open-editorial="demo-modal">
+                    Scopri la proposta <span aria-hidden="true">↗</span>
+                </button>
+                <button type="button" data-open-editorial="notes-modal">
+                    Fonti e crediti
+                </button>
+            </div>
+        </aside>
+
+
         <dialog
             class="menu-dialog"
             id="menu-dialog"
@@ -276,6 +296,85 @@
         <dialog class="lightbox" id="photo-dialog" aria-labelledby="photo-caption">
             <button class="dialog-close" type="button" data-close-dialog aria-label="Chiudi la fotografia">×</button>
             <figure><img id="photo-full" alt=""><figcaption id="photo-caption"></figcaption></figure>
+        </dialog>
+    
+        <dialog
+            id="demo-modal"
+            class="editorial-dialog"
+            aria-labelledby="demo-modal-title"
+        >
+            <div class="editorial-content">
+                <button
+                    type="button"
+                    class="editorial-close"
+                    data-close-dialog
+                    aria-label="Chiudi finestra"
+                >×</button>
+                <p class="editorial-tag">Proposta digitale</p>
+                <h2 id="demo-modal-title">Alice Restaurant · Il mare, anche online.</h2>
+
+                <section class="editorial-block">
+                    <h3>Una presenza su misura</h3>
+                    <p>Una proposta web pensata per raccontare la vista sul mare di Trebisacce, l’atmosfera della sala e i sapori della cucina.</p>
+                </section>
+
+                <section class="editorial-block">
+                    <h3>Identità visiva</h3>
+                    <p>Blu mare, dettagli oro, immagini e video per valorizzare il ristorante e il suo panorama.</p>
+                </section>
+
+                <section class="editorial-block">
+                    <h3>Navigazione intuitiva</h3>
+                    <p>Un percorso tra sala, cucina e contatti, con collegamenti a Google Maps e TripAdvisor.</p>
+                </section>
+
+                <section class="editorial-block">
+                    <h3>Menù personalizzabile</h3>
+                    <p>Uno spazio predisposto per importare un menù completo oppure crearne uno su misura.</p>
+                </section>
+
+                <section class="editorial-block">
+                    <h3>Su ogni schermo</h3>
+                    <p>Un’interfaccia pensata per smartphone, tablet e computer.</p>
+                </section>
+            </div>
+        </dialog>
+
+        <dialog
+            id="notes-modal"
+            class="editorial-dialog"
+            aria-labelledby="notes-modal-title"
+        >
+            <div class="editorial-content">
+                <button
+                    type="button"
+                    class="editorial-close"
+                    data-close-dialog
+                    aria-label="Chiudi finestra"
+                >×</button>
+                <p class="editorial-tag">Trasparenza prima di tutto</p>
+                <h2 id="notes-modal-title">Fonti & crediti.</h2>
+
+                <section class="editorial-block">
+                    <h3>Il progetto</h3>
+                    <p>Demo indipendente, non ufficiale e non approvata da Alice Restaurant. Identità visiva, testi e struttura sono una proposta da concordare con i titolari.</p>
+                </section>
+
+                <section class="editorial-block">
+                    <h3>Fotografie e video</h3>
+                    <p>Il materiale visivo comprende fotografie di riferimento, immagini ritoccate e contenuti illustrativi elaborati anche con strumenti di intelligenza artificiale. La resa può differire dalla realtà. Per la versione ufficiale saranno verificati i diritti di utilizzo e selezionati materiali approvati dai titolari.</p>
+                </section>
+
+                <section class="editorial-block">
+                    <h3>Menù e collegamenti</h3>
+                    <p>I piatti presentati illustrano la proposta grafica e non costituiscono un menù aggiornato. “Esplora il menù” presenta le possibilità di inserimento del menù completo. Google Maps e TripAdvisor sono servizi esterni con proprie condizioni e informative.</p>
+                </section>
+
+                <section class="editorial-block">
+                    <h3>Privacy e funzionamento</h3>
+                    <p>Le informazioni sulla privacy della versione definitiva dovranno riflettere la configurazione effettiva di hosting, risorse esterne ed eventuali servizi aggiuntivi. Prima del lancio ufficiale saranno verificati contenuti, diritti sui materiali e gli eventuali adempimenti relativi a dati personali e cookie.</p>
+                </section>
+            </div>
         </dialog>
     </body>
 </html>
