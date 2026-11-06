@@ -6,13 +6,13 @@
         <meta name="theme-color" content="#061e30">
         <meta
             name="description"
-            content="Alice Restaurant a Trebisacce. Un tavolo con vista sullo Ionio, i colori del mare e il piacere di stare a tavola. Scopri il ristorante e contattaci."
+            content="Alice Restaurant a Trebisacce. Lo Ionio, in prima fila sullo Ionio, i colori del mare e il piacere di stare a tavola. Scopri il ristorante e contattaci."
         >
-        <meta property="og:title" content="Alice Restaurant — Un tavolo con vista">
-        <meta property="og:description" content="Il mare davanti. Il piacere di stare a tavola. Alice Restaurant, Trebisacce.">
+        <meta property="og:title" content="Alice Restaurant — Lo Ionio, in prima fila">
+        <meta property="og:description" content="Lo Ionio, in prima fila. Alice Restaurant a Trebisacce, balcone dell’alto Ionio.">
         <meta property="og:type" content="website">
         <meta property="og:image" content="assets/panorama-1846.webp">
-        <title>Alice Restaurant — Un tavolo con vista</title>
+        <title>Alice Restaurant — Lo Ionio, in prima fila</title>
         <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
         <link
             rel="preload"
@@ -31,8 +31,17 @@
 
         <header class="site-header" id="site-header">
             <a class="brand" href="#inizio" aria-label="Alice Restaurant, torna all’inizio">
-                <span class="brand-name">ALICE</span>
-                <span class="brand-caption">RESTAURANT</span>
+                <img
+                    class="brand-symbol"
+                    src="assets/logo-oro.png"
+                    width="1288"
+                    height="1085"
+                    alt=""
+                >
+                <span class="brand-text">
+                    <span class="brand-name">ALICE</span>
+                    <span class="brand-caption">RESTAURANT</span>
+                </span>
             </a>
 
             <button class="nav-toggle" type="button" aria-label="Apri navigazione" aria-controls="main-nav" aria-expanded="false">
@@ -72,15 +81,14 @@
             </section>
 
             <div class="location-strip">
-                <p><span class="location-dot" aria-hidden="true"></span>Trebisacce <span class="separator">/</span> Sul mare Ionio</p>
+                <p><span class="location-dot" aria-hidden="true"></span><span>Trebisacce, balcone dell’alto Ionio</span></p>
                 <a href="#ristorante" class="scroll-invitation">Lasciati ispirare <span aria-hidden="true">↓</span></a>
             </div>
 
             <section class="restaurant section-anchor" id="ristorante" aria-labelledby="restaurant-title">
                 <div class="restaurant-copy">
                     <p class="eyebrow reveal"><span class="section-number">01</span> Il ristorante <span class="fine-line"></span></p>
-                    <h1 id="restaurant-title" class="reveal">Un tavolo<br>con <em>vista.</em></h1>
-                    <p class="lead reveal">Il mare davanti.<br>Il piacere di stare a tavola.</p>
+                    <h1 id="restaurant-title" class="reveal">Lo Ionio,<br>in <em>prima fila.</em></h1>
                     <p class="body-copy reveal">Uno sguardo su Trebisacce, l’orizzonte dello Ionio e il tempo di godersi ogni assaggio. Da Alice, il panorama accompagna i tuoi momenti a tavola.</p>
                     <a class="text-link reveal" href="#cucina">Scopri la nostra cucina <span aria-hidden="true">↘</span></a>
                     <span class="restaurant-coordinate" aria-hidden="true">CALABRIA, VISTA MARE.</span>
@@ -117,7 +125,7 @@
                 <div class="section-heading">
                     <p class="eyebrow reveal"><span class="section-number">02</span> La cucina <span class="fine-line"></span></p>
                     <h2 class="reveal" id="cuisine-title">Un assaggio del<br>nostro <em>menù</em></h2>
-                    <p class="section-note reveal">Colori, profumi e voglia<br>di un altro assaggio.</p>
+                    <p class="section-note reveal"><strong>Colori</strong>, <strong>profumi</strong> e <strong>voglia</strong><br>di un altro <strong>assaggio</strong>.</p>
                 </div>
                 <div class="food-gallery">
                     <figure class="dish reveal">
@@ -244,7 +252,17 @@
                         >Leggi su Tripadvisor <span aria-hidden="true">↗</span></a>
                     </div>
                 </div>
-                <div class="footer-wordmark reveal" aria-hidden="true">ALICE<span>RESTAURANT</span></div>
+                <div class="footer-wordmark reveal" aria-hidden="true">
+                    <img
+                        class="footer-logo"
+                        src="assets/alice.png"
+                        width="2048"
+                        height="510"
+                        alt=""
+                        loading="lazy"
+                    >
+                    <span>RESTAURANT</span>
+                </div>
                 <footer class="site-footer">
                     <p>© <span data-year>2026</span> <span data-name>Alice Restaurant</span></p>
                     <p data-footer-note>Trebisacce · Calabria · Mar Ionio</p>
@@ -254,17 +272,46 @@
         </main>
 
         <!-- FASCIA DEMO EDITORIALE -->
-        <aside class="demo-banner" aria-label="Informazioni sulla demo">
-            <div>
-                <span class="demo-banner-tag">PROPOSTA DIGITALE</span>
-                <p>Una nuova prospettiva per Alice Restaurant.</p>
-                <small>Demo indipendente · Proposta da concordare con i titolari</small>
+        <aside
+            class="demo-banner"
+            aria-label="Informazioni sulla demo"
+        >
+            <img
+                class="demo-banner-logo"
+                src="assets/logo-oro.png"
+                width="1288"
+                height="1085"
+                alt=""
+                loading="lazy"
+            >
+
+            <div class="demo-banner-copy">
+                <span class="demo-banner-tag">
+                    PROPOSTA DIGITALE
+                </span>
+
+                <p>
+                    Una nuova prospettiva per Alice Restaurant.
+                </p>
+
+                <small>
+                    Demo indipendente · Proposta da concordare con i titolari
+                </small>
             </div>
+
             <div class="demo-banner-actions">
-                <button type="button" data-open-editorial="demo-modal">
-                    Scopri la proposta <span aria-hidden="true">↗</span>
+                <button
+                    type="button"
+                    data-open-editorial="demo-modal"
+                >
+                    Scopri la proposta
+                    <span aria-hidden="true">↗</span>
                 </button>
-                <button type="button" data-open-editorial="notes-modal">
+
+                <button
+                    type="button"
+                    data-open-editorial="notes-modal"
+                >
                     Fonti e crediti
                 </button>
             </div>
