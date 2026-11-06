@@ -64,7 +64,9 @@
 
     if (Array.isArray(config.openingHours) && config.openingHours.length) {
         const hours = document.querySelector("[data-hours]");
-        const lines = config.openingHours.filter((line) => typeof line === "string" && line.trim());
+        const lines = config.openingHours.filter(
+            (line) => typeof line === "string" && line.trim(),
+        );
         lines.forEach((line) => {
             const paragraph = document.createElement("p");
             paragraph.textContent = line;
@@ -78,7 +80,8 @@
         const pdfLink = document.querySelector("[data-menu-pdf]");
         pdfLink.href = pdfUrl;
         pdfLink.hidden = false;
-        document.querySelector(".menu-status").textContent = "Il menù in PDF è disponibile qui sotto.";
+        document.querySelector(".menu-status").textContent =
+            "Il menù in PDF è disponibile qui sotto.";
     }
 
     // NAVIGAZIONE MOBILE
@@ -91,7 +94,10 @@
     navigationToggle.addEventListener("click", () => {
         const isOpen = navigation.classList.toggle("is-open");
         navigationToggle.setAttribute("aria-expanded", String(isOpen));
-        navigationToggle.setAttribute("aria-label", isOpen ? "Chiudi navigazione" : "Apri navigazione");
+        navigationToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Chiudi navigazione" : "Apri navigazione",
+        );
     });
 
     navigation.querySelectorAll("a, button").forEach((item) => {
@@ -129,7 +135,8 @@
             const photo = document.querySelector("#photo-full");
             photo.src = button.dataset.lightbox;
             photo.alt = button.querySelector("img").alt;
-            document.querySelector("#photo-caption").textContent = button.dataset.caption;
+            document.querySelector("#photo-caption").textContent =
+                button.dataset.caption;
             openDialog(photoDialog, button);
         });
     });
@@ -155,8 +162,11 @@
         dialog.addEventListener("click", (event) => {
             if (pointerStartedOnBackdrop && event.target === dialog) {
                 const bounds = dialog.getBoundingClientRect();
-                const isOutside = event.clientX < bounds.left || event.clientX > bounds.right
-                    || event.clientY < bounds.top || event.clientY > bounds.bottom;
+                const isOutside =
+                    event.clientX < bounds.left ||
+                    event.clientX > bounds.right ||
+                    event.clientY < bounds.top ||
+                    event.clientY > bounds.bottom;
                 if (isOutside) dialog.close();
             }
             pointerStartedOnBackdrop = false;
@@ -195,9 +205,12 @@
         const updateVideoButton = () => {
             const paused = cuisineVideo.paused;
             videoToggle.textContent = paused ? "Riprendi video ▶" : "Pausa video Ⅱ";
-            videoToggle.setAttribute("aria-label", paused
-                ? "Riprendi il video di sfondo"
-                : "Metti in pausa il video di sfondo");
+            videoToggle.setAttribute(
+                "aria-label",
+                paused
+                    ? "Riprendi il video di sfondo"
+                    : "Metti in pausa il video di sfondo",
+            );
         };
 
         const syncVideo = () => {
@@ -232,10 +245,13 @@
         motionPreference.addEventListener("change", syncVideo);
 
         if ("IntersectionObserver" in window) {
-            const videoObserver = new IntersectionObserver(([entry]) => {
-                inView = entry.isIntersecting;
-                syncVideo();
-            }, { rootMargin: "180px 0px" });
+            const videoObserver = new IntersectionObserver(
+                ([entry]) => {
+                    inView = entry.isIntersecting;
+                    syncVideo();
+                },
+                { rootMargin: "180px 0px" },
+            );
             videoObserver.observe(cuisine);
         } else {
             inView = true;
@@ -243,21 +259,23 @@
         }
     }
 
-    
     const revealElements = document.querySelectorAll(".reveal");
 
     if (!motionPreference.matches && "IntersectionObserver" in window) {
         document.documentElement.classList.add("js-motion");
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (!entry.isIntersecting) return;
-                entry.target.classList.add("is-visible");
-                observer.unobserve(entry.target);
-            });
-        }, {
-            threshold: 0.08,
-            rootMargin: "0px 0px -25px 0px"
-        });
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) return;
+                    entry.target.classList.add("is-visible");
+                    observer.unobserve(entry.target);
+                });
+            },
+            {
+                threshold: 0.08,
+                rootMargin: "0px 0px -25px 0px",
+            },
+        );
 
         revealElements.forEach((element) => observer.observe(element));
     }
@@ -268,7 +286,6 @@
         }
     });
 
-
     const hero = document.querySelector(".hero");
     const heroImage = document.querySelector(".hero-image");
     const progress = document.querySelector(".scroll-progress");
@@ -276,12 +293,18 @@
 
     const updateScroll = () => {
         const scroll = window.scrollY;
-        const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const fraction = scrollableHeight > 0 ? Math.min(scroll / scrollableHeight, 1) : 0;
+        const scrollableHeight =
+            document.documentElement.scrollHeight - window.innerHeight;
+        const fraction =
+            scrollableHeight > 0 ? Math.min(scroll / scrollableHeight, 1) : 0;
         progress.style.transform = `scaleX(${fraction})`;
         header.classList.toggle("is-scrolled", scroll > 25);
 
-        if (!motionPreference.matches && !mobileViewport.matches && scroll < hero.offsetHeight + 100) {
+        if (
+            !motionPreference.matches &&
+            !mobileViewport.matches &&
+            scroll < hero.offsetHeight + 100
+        ) {
             const displacement = Math.min(scroll * 0.12, 80);
             heroImage.style.transform = `translateY(${displacement}px) scale(1.03)`;
         } else if (motionPreference.matches || mobileViewport.matches) {

@@ -1,97 +1,213 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#061e30">
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        />
+        <meta
+            name="theme-color"
+            content="#061e30"
+        />
         <meta
             name="description"
-            content="Alice Restaurant a Trebisacce. Lo Ionio, in prima fila sullo Ionio, i colori del mare e il piacere di stare a tavola. Scopri il ristorante e contattaci."
-        >
-        <meta property="og:title" content="Alice Restaurant — Lo Ionio, in prima fila">
-        <meta property="og:description" content="Lo Ionio, in prima fila. Alice Restaurant a Trebisacce, balcone dell’alto Ionio.">
-        <meta property="og:type" content="website">
-        <meta property="og:image" content="assets/panorama-1846.webp">
+            content="Alice Restaurant a Trebisacce. Lo Ionio, in prima fila, i colori del mare e il piacere di stare a tavola. Scopri il ristorante e contattaci."
+        />
+        <meta
+            property="og:title"
+            content="Alice Restaurant — Lo Ionio, in prima fila"
+        />
+        <meta
+            property="og:description"
+            content="Lo Ionio, in prima fila. Alice Restaurant a Trebisacce, balcone dell’alto Ionio."
+        />
+        <meta
+            property="og:type"
+            content="website"
+        />
+        <meta
+            property="og:image"
+            content="assets/panorama-1846.webp"
+        />
         <title>Alice Restaurant — Lo Ionio, in prima fila</title>
-        <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="assets/favicon.svg"
+        />
         <link
             rel="preload"
             as="image"
             href="assets/panorama-1846.webp"
             imagesrcset="assets/panorama-960.webp 960w, assets/panorama-1846.webp 1846w"
             imagesizes="100vw"
-        >
-        <link rel="stylesheet" href="style.css">
-        <script src="config.js" defer></script>
-        <script src="script.js" defer></script>
+        />
+        <link
+            rel="stylesheet"
+            href="style.css?v=20261106-clean2"
+        />
+        <script
+            src="config.js"
+            defer
+        ></script>
+        <script
+            src="script.js?v=20261106-clean2"
+            defer
+        ></script>
         <script src="startup.js"></script>
     </head>
     <body>
-        <a class="skip-link" href="#ristorante">Vai al contenuto</a>
+        <a
+            class="skip-link"
+            href="#ristorante"
+            >Vai al contenuto</a
+        >
 
-        <header class="site-header" id="site-header">
-            <a class="brand" href="#inizio" aria-label="Alice Restaurant, torna all’inizio">
+        <header
+            class="site-header"
+            id="site-header"
+        >
+            <a
+                class="brand"
+                href="#inizio"
+                aria-label="Alice Restaurant, torna all’inizio"
+            >
                 <img
                     class="brand-symbol"
                     src="assets/logo-oro.png"
-                    width="1288"
-                    height="1085"
+                    width="64"
+                    height="54"
                     alt=""
-                >
+                />
                 <span class="brand-text">
                     <span class="brand-name">ALICE</span>
                     <span class="brand-caption">RESTAURANT</span>
                 </span>
             </a>
 
-            <button class="nav-toggle" type="button" aria-label="Apri navigazione" aria-controls="main-nav" aria-expanded="false">
+            <button
+                class="nav-toggle"
+                type="button"
+                aria-label="Apri navigazione"
+                aria-controls="main-nav"
+                aria-expanded="false"
+            >
                 <span></span>
                 <span></span>
             </button>
 
-            <nav class="main-nav" id="main-nav" aria-label="Navigazione principale">
-                <a class="nav-link" href="#ristorante">Ristorante</a>
-                <button class="nav-link" type="button" data-open-menu>Menù</button>
+            <nav
+                class="main-nav"
+                id="main-nav"
+                aria-label="Navigazione principale"
+            >
+                <a
+                    class="nav-link"
+                    href="#ristorante"
+                    >Ristorante</a
+                >
+                <button
+                    class="nav-link"
+                    type="button"
+                    data-open-menu
+                >
+                    Menù
+                </button>
                 <a
                     class="nav-link"
                     href="https://www.google.com/maps/search/?api=1&query=Alice+Restaurant+Via+Virgilio+Trebisacce"
                     data-maps
                     target="_blank"
                     rel="noopener noreferrer"
-                >Dove siamo <span class="small-arrow" aria-hidden="true">↗</span></a>
-                <a class="button button-outline nav-book" href="#contatti">Prenota un tavolo <span aria-hidden="true">↗</span></a>
+                    >Dove siamo
+                    <span
+                        class="small-arrow"
+                        aria-hidden="true"
+                        >↗</span
+                    ></a
+                >
+                <a
+                    class="button button-outline nav-book"
+                    href="#contatti"
+                    >Prenota un tavolo <span aria-hidden="true">↗</span></a
+                >
             </nav>
-            <div class="scroll-progress" aria-hidden="true"></div>
+            <div
+                class="scroll-progress"
+                aria-hidden="true"
+            ></div>
         </header>
 
         <main>
-            <section class="hero" id="inizio" aria-label="Il panorama di Trebisacce sul mare Ionio">
+            <section
+                class="hero"
+                id="inizio"
+                aria-label="Il panorama di Trebisacce sul mare Ionio"
+            >
                 <div class="hero-image-wrap">
                     <img
                         class="hero-image"
                         src="assets/panorama-1846.webp"
-                        srcset="assets/panorama-960.webp 960w, assets/panorama-1846.webp 1846w"
+                        srcset="
+                            assets/panorama-960.webp   960w,
+                            assets/panorama-1846.webp 1846w
+                        "
                         sizes="100vw"
                         width="1846"
                         height="852"
                         alt="Trebisacce all’ora blu: il paese illuminato, il mare Ionio e il riflesso della luna."
                         fetchpriority="high"
-                    >
+                    />
                 </div>
             </section>
 
             <div class="location-strip">
-                <p><span class="location-dot" aria-hidden="true"></span><span>Trebisacce, balcone dell’alto Ionio</span></p>
-                <a href="#ristorante" class="scroll-invitation">Lasciati ispirare <span aria-hidden="true">↓</span></a>
+                <p>
+                    <span
+                        class="location-dot"
+                        aria-hidden="true"
+                    ></span
+                    ><span>Trebisacce, balcone dell’alto Ionio</span>
+                </p>
+                <a
+                    href="#ristorante"
+                    class="scroll-invitation"
+                    >Lasciati ispirare <span aria-hidden="true">↓</span></a
+                >
             </div>
 
-            <section class="restaurant section-anchor" id="ristorante" aria-labelledby="restaurant-title">
+            <section
+                class="restaurant section-anchor"
+                id="ristorante"
+                aria-labelledby="restaurant-title"
+            >
                 <div class="restaurant-copy">
-                    <p class="eyebrow reveal"><span class="section-number">01</span> Il ristorante <span class="fine-line"></span></p>
-                    <h1 id="restaurant-title" class="reveal">Lo Ionio,<br>in <em>prima fila.</em></h1>
-                    <p class="body-copy reveal">Uno sguardo su Trebisacce, l’orizzonte dello Ionio e il tempo di godersi ogni assaggio. Da Alice, il panorama accompagna i tuoi momenti a tavola.</p>
-                    <a class="text-link reveal" href="#cucina">Scopri la nostra cucina <span aria-hidden="true">↘</span></a>
-                    <span class="restaurant-coordinate" aria-hidden="true">CALABRIA, VISTA MARE.</span>
+                    <p class="eyebrow reveal">
+                        <span class="section-number">01</span> Il ristorante
+                        <span class="fine-line"></span>
+                    </p>
+                    <h1
+                        id="restaurant-title"
+                        class="reveal"
+                    >
+                        Lo Ionio,<br />in <em>prima fila.</em>
+                    </h1>
+                    <p class="body-copy reveal">
+                        Uno sguardo su Trebisacce, l’orizzonte dello Ionio e il tempo di
+                        godersi ogni assaggio. Da Alice, il panorama accompagna i tuoi
+                        momenti a tavola.
+                    </p>
+                    <a
+                        class="text-link reveal"
+                        href="#cucina"
+                        >Scopri la nostra cucina <span aria-hidden="true">↘</span></a
+                    >
+                    <span
+                        class="restaurant-coordinate"
+                        aria-hidden="true"
+                        >CALABRIA, VISTA MARE.</span
+                    >
                 </div>
                 <figure class="restaurant-photo reveal image-reveal">
                     <img
@@ -102,13 +218,20 @@
                         height="1440"
                         alt="La sala di Alice con tavoli apparecchiati, sedie bianche e la grande vetrata sul paese e sul mare."
                         loading="lazy"
-                    >
-                    
+                    />
                 </figure>
             </section>
 
-            <section class="cuisine section-anchor" id="cucina" aria-labelledby="cuisine-title">
-                <div class="cuisine-background" aria-hidden="true" hidden>
+            <section
+                class="cuisine section-anchor"
+                id="cucina"
+                aria-labelledby="cuisine-title"
+            >
+                <div
+                    class="cuisine-background"
+                    aria-hidden="true"
+                    hidden
+                >
                     <video
                         class="cuisine-video"
                         muted
@@ -119,13 +242,30 @@
                     ></video>
                     <div class="cuisine-shade"></div>
                 </div>
-                <button class="video-toggle" type="button" aria-label="Metti in pausa il video di sfondo" hidden>
+                <button
+                    class="video-toggle"
+                    type="button"
+                    aria-label="Metti in pausa il video di sfondo"
+                    hidden
+                >
                     Pausa video <span aria-hidden="true">Ⅱ</span>
                 </button>
                 <div class="section-heading">
-                    <p class="eyebrow reveal"><span class="section-number">02</span> La cucina <span class="fine-line"></span></p>
-                    <h2 class="reveal" id="cuisine-title">Un assaggio del<br>nostro <em>menù</em></h2>
-                    <p class="section-note reveal"><strong>Colori</strong>, <strong>profumi</strong> e <strong>voglia</strong><br>di un altro <strong>assaggio</strong>.</p>
+                    <p class="eyebrow reveal">
+                        <span class="section-number">02</span> La cucina
+                        <span class="fine-line"></span>
+                    </p>
+                    <h2
+                        class="reveal"
+                        id="cuisine-title"
+                    >
+                        Un assaggio del<br />nostro <em>menù</em>
+                    </h2>
+                    <p class="section-note reveal">
+                        <strong>Colori</strong>, <strong>profumi</strong> e
+                        <strong>voglia</strong><br />di un altro
+                        <strong>assaggio</strong>.
+                    </p>
                 </div>
                 <div class="food-gallery">
                     <figure class="dish reveal">
@@ -138,16 +278,23 @@
                         >
                             <img
                                 src="assets/pasta-540.webp"
-                                srcset="assets/pasta-540.webp 540w, assets/pasta-1080.webp 1080w"
+                                srcset="
+                                    assets/pasta-540.webp   540w,
+                                    assets/pasta-1080.webp 1080w
+                                "
                                 sizes="(max-width: 600px) 90vw, 32vw"
                                 width="1080"
                                 height="1440"
                                 alt="Pasta con gamberi, cozze, vongole e pomodorini su un piatto di vetro."
                                 loading="lazy"
+                            />
+                            <span
+                                class="image-plus"
+                                aria-hidden="true"
+                                >↗</span
                             >
-                            <span class="image-plus" aria-hidden="true">↗</span>
                         </button>
-                       <span class="dish-index">01 /</span>
+                        <span class="dish-index">01 /</span>
                     </figure>
                     <figure class="dish reveal">
                         <button
@@ -159,14 +306,21 @@
                         >
                             <img
                                 src="assets/mediterraneo-540.webp"
-                                srcset="assets/mediterraneo-540.webp 540w, assets/mediterraneo-1080.webp 1080w"
+                                srcset="
+                                    assets/mediterraneo-540.webp   540w,
+                                    assets/mediterraneo-1080.webp 1080w
+                                "
                                 sizes="(max-width: 600px) 90vw, 32vw"
                                 width="1080"
                                 height="1440"
                                 alt="Un piatto con spicchi d’arancia, granella di pistacchi e rucola."
                                 loading="lazy"
+                            />
+                            <span
+                                class="image-plus"
+                                aria-hidden="true"
+                                >↗</span
                             >
-                            <span class="image-plus" aria-hidden="true">↗</span>
                         </button>
                         <span class="dish-index">02 /</span>
                     </figure>
@@ -180,79 +334,151 @@
                         >
                             <img
                                 src="assets/gratinati-540.webp"
-                                srcset="assets/gratinati-540.webp 540w, assets/gratinati-1080.webp 1080w"
+                                srcset="
+                                    assets/gratinati-540.webp   540w,
+                                    assets/gratinati-1080.webp 1080w
+                                "
                                 sizes="(max-width: 600px) 90vw, 32vw"
                                 width="1080"
                                 height="1440"
                                 alt="Gratinati di mare con cozze, limone e cipolle rosse."
                                 loading="lazy"
+                            />
+                            <span
+                                class="image-plus"
+                                aria-hidden="true"
+                                >↗</span
                             >
-                            <span class="image-plus" aria-hidden="true">↗</span>
                         </button>
                         <span class="dish-index">03 /</span>
                     </figure>
                 </div>
             </section>
 
-            <button class="menu-banner" type="button" data-open-menu>
-                <span class="menu-banner-label"><span class="eyebrow">C’è ancora tanto da scoprire</span><span class="menu-banner-title">Esplora il <em>menù</em></span></span>
-                <span class="long-arrow" aria-hidden="true"><span></span>↗</span>
+            <button
+                class="menu-banner"
+                type="button"
+                data-open-menu
+            >
+                <span class="menu-banner-label"
+                    ><span class="eyebrow">C’è ancora tanto da scoprire</span
+                    ><span class="menu-banner-title"
+                        >Esplora il <em>menù</em></span
+                    ></span
+                >
+                <span
+                    class="long-arrow"
+                    aria-hidden="true"
+                    ><span></span>↗</span
+                >
             </button>
 
-            <section class="contact section-anchor" id="contatti" aria-labelledby="contact-title">
+            <section
+                class="contact section-anchor"
+                id="contatti"
+                aria-labelledby="contact-title"
+            >
                 <div class="contact-heading">
                     <div>
-                        <p class="eyebrow reveal"><span class="section-number">03</span> Ti aspettiamo <span class="fine-line"></span></p>
-                        <h2 class="reveal" id="contact-title">Ci vediamo<br>da <em>Alice.</em></h2>
+                        <p class="eyebrow reveal">
+                            <span class="section-number">03</span> Ti aspettiamo
+                            <span class="fine-line"></span>
+                        </p>
+                        <h2
+                            class="reveal"
+                            id="contact-title"
+                        >
+                            Ci vediamo<br />da <em>Alice.</em>
+                        </h2>
                     </div>
                     <div class="contact-book reveal">
-                        <p>Il prossimo momento speciale<br>comincia da un tavolo.</p>
-                        <a class="button button-outline" href="tel:+39XXXXXXXXXXX" data-phone-link>Prenota un tavolo <span aria-hidden="true">↗</span></a>
+                        <p>Il prossimo momento speciale<br />comincia da un tavolo.</p>
+                        <a
+                            class="button button-outline"
+                            href="tel:+39XXXXXXXXXXX"
+                            data-phone-link
+                            >Prenota un tavolo <span aria-hidden="true">↗</span></a
+                        >
                     </div>
                 </div>
 
                 <div class="contact-grid">
                     <div class="contact-column reveal">
                         <h3>Contatti</h3>
-                        <a class="contact-phone" href="tel:+39 XXX-XXX-XXXX" data-phone-link data-phone-text>+39 327 400 5251</a>
-                        <a data-email-row hidden></a>
-                        <div class="hours" data-hours></div>
-                        <p class="contact-detail" data-hours-fallback>Per disponibilità e orari,<br>contattaci telefonicamente.</p>
+                        <a
+                            class="contact-phone"
+                            href="tel:+39 XXX-XXX-XXXX"
+                            data-phone-link
+                            data-phone-text
+                            >+39 327 400 5251</a
+                        >
+                        <a
+                            data-email-row
+                            hidden
+                        ></a>
+                        <div
+                            class="hours"
+                            data-hours
+                        ></div>
+                        <p
+                            class="contact-detail"
+                            data-hours-fallback
+                        >
+                            Per disponibilità e orari,<br />contattaci telefonicamente.
+                        </p>
                     </div>
                     <div class="contact-column reveal">
-                        <h3><a
-                            href="https://www.google.com/maps/search/?api=1&query=Alice+Restaurant+Via+Virgilio+Trebisacce"
-                            data-maps
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >Dove siamo <span aria-hidden="true">↗</span></a></h3>
-                        <p><span data-address>Via Virgilio</span><br><span data-locality>87075 Trebisacce (CS)</span></p>
+                        <h3>
+                            <a
+                                href="https://www.google.com/maps/search/?api=1&query=Alice+Restaurant+Via+Virgilio+Trebisacce"
+                                data-maps
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Dove siamo <span aria-hidden="true">↗</span></a
+                            >
+                        </h3>
+                        <p>
+                            <span data-address>Via Virgilio</span><br /><span
+                                data-locality
+                                >87075 Trebisacce (CS)</span
+                            >
+                        </p>
                         <a
                             class="text-link"
                             href="https://www.google.com/maps/search/?api=1&query=Alice+Restaurant+Via+Virgilio+Trebisacce"
                             data-maps
                             target="_blank"
                             rel="noopener noreferrer"
-                        >Apri Google Maps <span aria-hidden="true">↗</span></a>
+                            >Apri Google Maps <span aria-hidden="true">↗</span></a
+                        >
                     </div>
                     <div class="contact-column reveal">
-                        <h3><a
-                            href="https://www.tripadvisor.it/Restaurant_Review-g1186309-d20244113-Reviews-Alice_restaurant_di_Giancarlo_Mazzei-Trebisacce_Province_of_Cosenza_Calabria.html"
-                            data-tripadvisor
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >Recensioni <span aria-hidden="true">↗</span></a></h3>
-                        <p>Le esperienze di chi<br>si è già seduto a tavola con noi.</p>
+                        <h3>
+                            <a
+                                href="https://www.tripadvisor.it/Restaurant_Review-g1186309-d20244113-Reviews-Alice_restaurant_di_Giancarlo_Mazzei-Trebisacce_Province_of_Cosenza_Calabria.html"
+                                data-tripadvisor
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Recensioni <span aria-hidden="true">↗</span></a
+                            >
+                        </h3>
+                        <p>
+                            Le esperienze di chi<br />si è già seduto a tavola con noi.
+                        </p>
                         <a
                             class="text-link"
                             href="https://www.tripadvisor.it/Restaurant_Review-g1186309-d20244113-Reviews-Alice_restaurant_di_Giancarlo_Mazzei-Trebisacce_Province_of_Cosenza_Calabria.html"
                             data-tripadvisor
                             target="_blank"
                             rel="noopener noreferrer"
-                        >Leggi su Tripadvisor <span aria-hidden="true">↗</span></a>
+                            >Leggi su Tripadvisor <span aria-hidden="true">↗</span></a
+                        >
                     </div>
                 </div>
-                <div class="footer-wordmark reveal" aria-hidden="true">
+                <div
+                    class="footer-wordmark reveal"
+                    aria-hidden="true"
+                >
                     <img
                         class="footer-logo"
                         src="assets/alice.png"
@@ -260,11 +486,14 @@
                         height="510"
                         alt=""
                         loading="lazy"
-                    >
+                    />
                     <span>RESTAURANT</span>
                 </div>
                 <footer class="site-footer">
-                    <p>© <span data-year>2026</span> <span data-name>Alice Restaurant</span></p>
+                    <p>
+                        © <span data-year>2026</span>
+                        <span data-name>Alice Restaurant</span>
+                    </p>
                     <p data-footer-note>Trebisacce · Calabria · Mar Ionio</p>
                     <a href="#inizio">Torna su <span aria-hidden="true">↑</span></a>
                 </footer>
@@ -279,20 +508,16 @@
             <img
                 class="demo-banner-logo"
                 src="assets/logo-oro.png"
-                width="1288"
-                height="1085"
+                width="130"
+                height="110"
                 alt=""
                 loading="lazy"
-            >
+            />
 
             <div class="demo-banner-copy">
-                <span class="demo-banner-tag">
-                    PROPOSTA DIGITALE
-                </span>
+                <span class="demo-banner-tag"> PROPOSTA DIGITALE </span>
 
-                <p>
-                    Una nuova prospettiva per Alice Restaurant.
-                </p>
+                <p>Una nuova prospettiva per Alice Restaurant.</p>
 
                 <small>
                     Demo indipendente · Proposta da concordare con i titolari
@@ -317,7 +542,6 @@
             </div>
         </aside>
 
-
         <dialog
             class="menu-dialog"
             id="menu-dialog"
@@ -325,26 +549,87 @@
             aria-describedby="menu-dialog-description"
         >
             <div class="dialog-shell">
-                <button class="dialog-close" type="button" data-close-dialog aria-label="Chiudi la finestra del menù">×</button>
+                <button
+                    class="dialog-close"
+                    type="button"
+                    data-close-dialog
+                    aria-label="Chiudi la finestra del menù"
+                >
+                    ×
+                </button>
                 <p class="eyebrow">Alice Restaurant <span class="fine-line"></span></p>
                 <p class="demo-label">Anteprima dello spazio menù</p>
                 <h2 id="menu-dialog-title">Il tuo menù, qui.</h2>
-                <p class="dialog-description" id="menu-dialog-description">Questo spazio è pronto per accogliere il menù del ristorante. Potrà essere importato un menù già esistente oppure creato un nuovo menù completo, consultabile direttamente dal sito.</p>
+                <p
+                    class="dialog-description"
+                    id="menu-dialog-description"
+                >
+                    Questo spazio è pronto per accogliere il menù del ristorante. Potrà
+                    essere importato un menù già esistente oppure creato un nuovo menù
+                    completo, consultabile direttamente dal sito.
+                </p>
                 <div class="menu-options">
-                    <div><span class="option-number">01 /</span><h3>Importare il menù</h3><p>Il menù già pronto, in PDF, accessibile da computer e smartphone.</p></div>
-                    <div><span class="option-number">02 /</span><h3>Creare il menù digitale</h3><p>Un menù completo con categorie, piatti, descrizioni, prezzi e informazioni sugli allergeni.</p></div>
+                    <div>
+                        <span class="option-number">01 /</span>
+                        <h3>Importare il menù</h3>
+                        <p>
+                            Il menù già pronto, in PDF, accessibile da computer e
+                            smartphone.
+                        </p>
+                    </div>
+                    <div>
+                        <span class="option-number">02 /</span>
+                        <h3>Creare il menù digitale</h3>
+                        <p>
+                            Un menù completo con categorie, piatti, descrizioni, prezzi
+                            e informazioni sugli allergeni.
+                        </p>
+                    </div>
                 </div>
-                <p class="menu-status">Il menù completo non è ancora disponibile in questa versione dimostrativa.</p>
-                <a class="button button-blue" data-menu-pdf hidden target="_blank" rel="noopener noreferrer">Apri il menù PDF <span aria-hidden="true">↗</span></a>
-                <button class="button button-blue" type="button" data-close-dialog>Torna al ristorante <span aria-hidden="true">↗</span></button>
+                <p class="menu-status">
+                    Il menù completo non è ancora disponibile in questa versione
+                    dimostrativa.
+                </p>
+                <a
+                    class="button button-blue"
+                    data-menu-pdf
+                    hidden
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Apri il menù PDF <span aria-hidden="true">↗</span></a
+                >
+                <button
+                    class="button button-blue"
+                    type="button"
+                    data-close-dialog
+                >
+                    Torna al ristorante <span aria-hidden="true">↗</span>
+                </button>
             </div>
         </dialog>
 
-        <dialog class="lightbox" id="photo-dialog" aria-labelledby="photo-caption">
-            <button class="dialog-close" type="button" data-close-dialog aria-label="Chiudi la fotografia">×</button>
-            <figure><img id="photo-full" alt=""><figcaption id="photo-caption"></figcaption></figure>
+        <dialog
+            class="lightbox"
+            id="photo-dialog"
+            aria-labelledby="photo-caption"
+        >
+            <button
+                class="dialog-close"
+                type="button"
+                data-close-dialog
+                aria-label="Chiudi la fotografia"
+            >
+                ×
+            </button>
+            <figure>
+                <img
+                    id="photo-full"
+                    alt=""
+                />
+                <figcaption id="photo-caption"></figcaption>
+            </figure>
         </dialog>
-    
+
         <dialog
             id="demo-modal"
             class="editorial-dialog"
@@ -356,28 +641,42 @@
                     class="editorial-close"
                     data-close-dialog
                     aria-label="Chiudi finestra"
-                >×</button>
+                >
+                    ×
+                </button>
                 <p class="editorial-tag">Proposta digitale</p>
                 <h2 id="demo-modal-title">Alice Restaurant · Il mare, anche online.</h2>
 
                 <section class="editorial-block">
                     <h3>Una presenza su misura</h3>
-                    <p>Una proposta web pensata per raccontare la vista sul mare di Trebisacce, l’atmosfera della sala e i sapori della cucina.</p>
+                    <p>
+                        Una proposta web pensata per raccontare la vista sul mare di
+                        Trebisacce, l’atmosfera della sala e i sapori della cucina.
+                    </p>
                 </section>
 
                 <section class="editorial-block">
                     <h3>Identità visiva</h3>
-                    <p>Blu mare, dettagli oro, immagini e video per valorizzare il ristorante e il suo panorama.</p>
+                    <p>
+                        Blu mare, dettagli oro, immagini e video per valorizzare il
+                        ristorante e il suo panorama.
+                    </p>
                 </section>
 
                 <section class="editorial-block">
                     <h3>Navigazione intuitiva</h3>
-                    <p>Un percorso tra sala, cucina e contatti, con collegamenti a Google Maps e TripAdvisor.</p>
+                    <p>
+                        Un percorso tra sala, cucina e contatti, con collegamenti a
+                        Google Maps e TripAdvisor.
+                    </p>
                 </section>
 
                 <section class="editorial-block">
                     <h3>Menù personalizzabile</h3>
-                    <p>Uno spazio predisposto per importare un menù completo oppure crearne uno su misura.</p>
+                    <p>
+                        Uno spazio predisposto per importare un menù completo oppure
+                        crearne uno su misura.
+                    </p>
                 </section>
 
                 <section class="editorial-block">
@@ -398,28 +697,53 @@
                     class="editorial-close"
                     data-close-dialog
                     aria-label="Chiudi finestra"
-                >×</button>
+                >
+                    ×
+                </button>
                 <p class="editorial-tag">Trasparenza prima di tutto</p>
                 <h2 id="notes-modal-title">Fonti & crediti.</h2>
 
                 <section class="editorial-block">
                     <h3>Il progetto</h3>
-                    <p>Demo indipendente, non ufficiale e non approvata da Alice Restaurant. Identità visiva, testi e struttura sono una proposta da concordare con i titolari.</p>
+                    <p>
+                        Demo indipendente, non ufficiale e non approvata da Alice
+                        Restaurant. Identità visiva, testi e struttura sono una proposta
+                        da concordare con i titolari.
+                    </p>
                 </section>
 
                 <section class="editorial-block">
                     <h3>Fotografie e video</h3>
-                    <p>Il materiale visivo comprende fotografie di riferimento, immagini ritoccate e contenuti illustrativi elaborati anche con strumenti di intelligenza artificiale. La resa può differire dalla realtà. Per la versione ufficiale saranno verificati i diritti di utilizzo e selezionati materiali approvati dai titolari.</p>
+                    <p>
+                        Il materiale visivo comprende fotografie di riferimento,
+                        immagini ritoccate e contenuti illustrativi elaborati anche con
+                        strumenti di intelligenza artificiale. La resa può differire
+                        dalla realtà. Per la versione ufficiale saranno verificati i
+                        diritti di utilizzo e selezionati materiali approvati dai
+                        titolari.
+                    </p>
                 </section>
 
                 <section class="editorial-block">
                     <h3>Menù e collegamenti</h3>
-                    <p>I piatti presentati illustrano la proposta grafica e non costituiscono un menù aggiornato. “Esplora il menù” presenta le possibilità di inserimento del menù completo. Google Maps e TripAdvisor sono servizi esterni con proprie condizioni e informative.</p>
+                    <p>
+                        I piatti presentati illustrano la proposta grafica e non
+                        costituiscono un menù aggiornato. “Esplora il menù” presenta le
+                        possibilità di inserimento del menù completo. Google Maps e
+                        TripAdvisor sono servizi esterni con proprie condizioni e
+                        informative.
+                    </p>
                 </section>
 
                 <section class="editorial-block">
                     <h3>Privacy e funzionamento</h3>
-                    <p>Le informazioni sulla privacy della versione definitiva dovranno riflettere la configurazione effettiva di hosting, risorse esterne ed eventuali servizi aggiuntivi. Prima del lancio ufficiale saranno verificati contenuti, diritti sui materiali e gli eventuali adempimenti relativi a dati personali e cookie.</p>
+                    <p>
+                        Le informazioni sulla privacy della versione definitiva dovranno
+                        riflettere la configurazione effettiva di hosting, risorse
+                        esterne ed eventuali servizi aggiuntivi. Prima del lancio
+                        ufficiale saranno verificati contenuti, diritti sui materiali e
+                        gli eventuali adempimenti relativi a dati personali e cookie.
+                    </p>
                 </section>
             </div>
         </dialog>
