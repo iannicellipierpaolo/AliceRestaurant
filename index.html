@@ -28,7 +28,7 @@
         />
         <meta
             property="og:image"
-            content="assets/panorama-1846.webp"
+            content="assets/alice-hero-poster.webp"
         />
         <title>Alice Restaurant — Lo Ionio, in prima fila</title>
         <link
@@ -39,20 +39,18 @@
         <link
             rel="preload"
             as="image"
-            href="assets/panorama-1846.webp"
-            imagesrcset="assets/panorama-960.webp 960w, assets/panorama-1846.webp 1846w"
-            imagesizes="100vw"
+            href="assets/alice-hero-poster.webp"
         />
         <link
             rel="stylesheet"
-            href="style.css?v=20261106-clean2"
+            href="style.css?v=20261109-hero-video"
         />
         <script
             src="config.js"
             defer
         ></script>
         <script
-            src="script.js?v=20261106-clean2"
+            src="script.js?v=20261109-hero-video"
             defer
         ></script>
         <script src="startup.js"></script>
@@ -146,19 +144,25 @@
                 aria-label="Il panorama di Trebisacce sul mare Ionio"
             >
                 <div class="hero-image-wrap">
-                    <img
-                        class="hero-image"
-                        src="assets/panorama-1846.webp"
-                        srcset="
-                            assets/panorama-960.webp   960w,
-                            assets/panorama-1846.webp 1846w
-                        "
-                        sizes="100vw"
-                        width="1846"
-                        height="852"
-                        alt="Trebisacce all’ora blu: il paese illuminato, il mare Ionio e il riflesso della luna."
-                        fetchpriority="high"
-                    />
+                    <video
+                        class="hero-video"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                        poster="assets/alice-hero-poster.webp"
+                        aria-label="Ripresa panoramica cinematografica sul mare"
+                    >
+                        <source
+                            src="assets/alice-hero-video.mp4"
+                            type="video/mp4"
+                        />
+                        <img
+                            src="assets/alice-hero-poster.webp"
+                            alt="Panorama sul mare di Alice Restaurant"
+                        />
+                    </video>
                 </div>
             </section>
 
@@ -242,14 +246,6 @@
                     ></video>
                     <div class="cuisine-shade"></div>
                 </div>
-                <button
-                    class="video-toggle"
-                    type="button"
-                    aria-label="Metti in pausa il video di sfondo"
-                    hidden
-                >
-                    Pausa video <span aria-hidden="true">Ⅱ</span>
-                </button>
                 <div class="section-heading">
                     <p class="eyebrow reveal">
                         <span class="section-number">02</span> La cucina
@@ -267,91 +263,199 @@
                         <strong>assaggio</strong>.
                     </p>
                 </div>
-                <div class="food-gallery">
-                    <figure class="dish reveal">
-                        <button
-                            class="dish-photo"
-                            type="button"
-                            data-lightbox="assets/pasta-1080.webp"
-                            data-caption="Sapori di mare"
-                            aria-label="Ingrandisci la foto della pasta ai frutti di mare"
-                        >
-                            <img
-                                src="assets/pasta-540.webp"
-                                srcset="
-                                    assets/pasta-540.webp   540w,
-                                    assets/pasta-1080.webp 1080w
-                                "
-                                sizes="(max-width: 600px) 90vw, 32vw"
-                                width="1080"
-                                height="1440"
-                                alt="Pasta con gamberi, cozze, vongole e pomodorini su un piatto di vetro."
-                                loading="lazy"
-                            />
-                            <span
-                                class="image-plus"
-                                aria-hidden="true"
-                                >↗</span
+                <!-- Slider continuo: il secondo gruppo viene duplicato via JavaScript. -->
+                <div
+                    class="food-gallery"
+                    aria-label="Galleria di otto fotografie della cucina Alice"
+                >
+                    <div class="food-gallery-track">
+                        <div class="food-gallery-set">
+                        <figure class="dish">
+                            <button
+                                class="dish-photo"
+                                type="button"
+                                data-lightbox="assets/alice-menu-01-1400.webp"
+                                data-caption="Carpaccio con agrumi, pistacchi e rucola"
+                                aria-label="Ingrandisci foto 1: Carpaccio con agrumi, pistacchi e rucola"
                             >
-                        </button>
-                        <span class="dish-index">01 /</span>
-                    </figure>
-                    <figure class="dish reveal">
-                        <button
-                            class="dish-photo"
-                            type="button"
-                            data-lightbox="assets/mediterraneo-1080.webp"
-                            data-caption="Contrasti mediterranei"
-                            aria-label="Ingrandisci il piatto con agrumi e pistacchi"
-                        >
-                            <img
-                                src="assets/mediterraneo-540.webp"
-                                srcset="
-                                    assets/mediterraneo-540.webp   540w,
-                                    assets/mediterraneo-1080.webp 1080w
-                                "
-                                sizes="(max-width: 600px) 90vw, 32vw"
-                                width="1080"
-                                height="1440"
-                                alt="Un piatto con spicchi d’arancia, granella di pistacchi e rucola."
-                                loading="lazy"
-                            />
-                            <span
-                                class="image-plus"
-                                aria-hidden="true"
-                                >↗</span
+                                <img
+                                    src="assets/alice-menu-01-720.webp"
+                                    width="720"
+                                    height="960"
+                                    alt="Carpaccio con agrumi, pistacchi e rucola"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                                <span
+                                    class="image-plus"
+                                    aria-hidden="true"
+                                >↗</span>
+                            </button>
+                            <span class="dish-index">01 / 08</span>
+                        </figure>
+                        <figure class="dish">
+                            <button
+                                class="dish-photo"
+                                type="button"
+                                data-lightbox="assets/alice-menu-02-1400.webp"
+                                data-caption="Gratinati di mare con limone e cipolla rossa"
+                                aria-label="Ingrandisci foto 2: Gratinati di mare con limone e cipolla rossa"
                             >
-                        </button>
-                        <span class="dish-index">02 /</span>
-                    </figure>
-                    <figure class="dish reveal">
-                        <button
-                            class="dish-photo"
-                            type="button"
-                            data-lightbox="assets/gratinati-1080.webp"
-                            data-caption="Il gusto della tradizione"
-                            aria-label="Ingrandisci la foto dei gratinati di mare"
-                        >
-                            <img
-                                src="assets/gratinati-540.webp"
-                                srcset="
-                                    assets/gratinati-540.webp   540w,
-                                    assets/gratinati-1080.webp 1080w
-                                "
-                                sizes="(max-width: 600px) 90vw, 32vw"
-                                width="1080"
-                                height="1440"
-                                alt="Gratinati di mare con cozze, limone e cipolle rosse."
-                                loading="lazy"
-                            />
-                            <span
-                                class="image-plus"
-                                aria-hidden="true"
-                                >↗</span
+                                <img
+                                    src="assets/alice-menu-02-720.webp"
+                                    width="720"
+                                    height="960"
+                                    alt="Gratinati di mare con limone e cipolla rossa"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                                <span
+                                    class="image-plus"
+                                    aria-hidden="true"
+                                >↗</span>
+                            </button>
+                            <span class="dish-index">02 / 08</span>
+                        </figure>
+                        <figure class="dish">
+                            <button
+                                class="dish-photo"
+                                type="button"
+                                data-lightbox="assets/alice-menu-03-1400.webp"
+                                data-caption="Pasta ai frutti di mare servita dal personale Alice"
+                                aria-label="Ingrandisci foto 3: Pasta ai frutti di mare servita dal personale Alice"
                             >
-                        </button>
-                        <span class="dish-index">03 /</span>
-                    </figure>
+                                <img
+                                    src="assets/alice-menu-03-720.webp"
+                                    width="720"
+                                    height="960"
+                                    alt="Pasta ai frutti di mare servita dal personale Alice"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                                <span
+                                    class="image-plus"
+                                    aria-hidden="true"
+                                >↗</span>
+                            </button>
+                            <span class="dish-index">03 / 08</span>
+                        </figure>
+                        <figure class="dish">
+                            <button
+                                class="dish-photo"
+                                type="button"
+                                data-lightbox="assets/alice-menu-04-1400.webp"
+                                data-caption="Crudo di mare con limone ed erbe aromatiche"
+                                aria-label="Ingrandisci foto 4: Crudo di mare con limone ed erbe aromatiche"
+                            >
+                                <img
+                                    src="assets/alice-menu-04-720.webp"
+                                    width="720"
+                                    height="960"
+                                    alt="Crudo di mare con limone ed erbe aromatiche"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                                <span
+                                    class="image-plus"
+                                    aria-hidden="true"
+                                >↗</span>
+                            </button>
+                            <span class="dish-index">04 / 08</span>
+                        </figure>
+                        <figure class="dish">
+                            <button
+                                class="dish-photo"
+                                type="button"
+                                data-lightbox="assets/alice-menu-05-1400.webp"
+                                data-caption="Calamaro alla griglia con agrumi"
+                                aria-label="Ingrandisci foto 5: Calamaro alla griglia con agrumi"
+                            >
+                                <img
+                                    src="assets/alice-menu-05-720.webp"
+                                    width="720"
+                                    height="960"
+                                    alt="Calamaro alla griglia con agrumi"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                                <span
+                                    class="image-plus"
+                                    aria-hidden="true"
+                                >↗</span>
+                            </button>
+                            <span class="dish-index">05 / 08</span>
+                        </figure>
+                        <figure class="dish">
+                            <button
+                                class="dish-photo"
+                                type="button"
+                                data-lightbox="assets/alice-menu-06-1400.webp"
+                                data-caption="Piatti gourmet di mare su una tavola azzurra"
+                                aria-label="Ingrandisci foto 6: Piatti gourmet di mare su una tavola azzurra"
+                            >
+                                <img
+                                    src="assets/alice-menu-06-720.webp"
+                                    width="720"
+                                    height="960"
+                                    alt="Piatti gourmet di mare su una tavola azzurra"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                                <span
+                                    class="image-plus"
+                                    aria-hidden="true"
+                                >↗</span>
+                            </button>
+                            <span class="dish-index">06 / 08</span>
+                        </figure>
+                        <figure class="dish">
+                            <button
+                                class="dish-photo"
+                                type="button"
+                                data-lightbox="assets/alice-menu-07-1400.webp"
+                                data-caption="Due portate di pesce con calice di vino bianco"
+                                aria-label="Ingrandisci foto 7: Due portate di pesce con calice di vino bianco"
+                            >
+                                <img
+                                    src="assets/alice-menu-07-720.webp"
+                                    width="720"
+                                    height="960"
+                                    alt="Due portate di pesce con calice di vino bianco"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                                <span
+                                    class="image-plus"
+                                    aria-hidden="true"
+                                >↗</span>
+                            </button>
+                            <span class="dish-index">07 / 08</span>
+                        </figure>
+                        <figure class="dish">
+                            <button
+                                class="dish-photo"
+                                type="button"
+                                data-lightbox="assets/alice-menu-08-1400.webp"
+                                data-caption="Toast gourmet con burrata e verdure"
+                                aria-label="Ingrandisci foto 8: Toast gourmet con burrata e verdure"
+                            >
+                                <img
+                                    src="assets/alice-menu-08-720.webp"
+                                    width="720"
+                                    height="960"
+                                    alt="Toast gourmet con burrata e verdure"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                                <span
+                                    class="image-plus"
+                                    aria-hidden="true"
+                                >↗</span>
+                            </button>
+                            <span class="dish-index">08 / 08</span>
+                        </figure>
+                        </div>
+                    </div>
                 </div>
             </section>
 

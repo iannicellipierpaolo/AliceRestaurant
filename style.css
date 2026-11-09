@@ -252,7 +252,8 @@ em {
     animation: panorama-enter 2.4s var(--ease) both;
 }
 
-.hero-image {
+.hero-image,
+.hero-video {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -490,12 +491,6 @@ h1 {
         rgba(22, 27, 29, 0.53) 45%,
         rgba(6, 22, 32, 0.8) 100%
     );
-}
-
-.video-toggle:hover,
-.video-toggle:focus-visible {
-    color: var(--gold-light);
-    background: var(--navy);
 }
 
 .cuisine.has-video .dish figcaption {
@@ -958,21 +953,6 @@ dialog[open] {
 }
 
 /* FASCIA DEMO E FINESTRE EDITORIALI */
-.video-toggle {
-    font-size: 11px;
-    background: #061e3066;
-    color: var(--paper);
-    border: 1px solid #b89a6280;
-    padding: 10px 14px;
-    min-height: 44px;
-    gap: 12px;
-    align-items: center;
-    top: 26px;
-    right: var(--gutter);
-    position: absolute;
-    display: none !important;
-}
-
 .editorial-tag {
     color: #e5cb98;
     font-size: 11px;
@@ -1400,7 +1380,8 @@ dialog[open] {
         min-height: 420px;
         max-height: 650px;
     }
-    .hero-image {
+    .hero-image,
+.hero-video {
         object-position: 10% center;
     }
     .location-strip {
@@ -1637,10 +1618,103 @@ dialog[open] {
         opacity: 1;
         transform: none;
     }
-    .hero-image {
+    .hero-image,
+.hero-video {
         transform: none !important;
     }
     .editorial-dialog[open] {
         animation: none;
+    }
+}
+
+/* ============================================================
+   SEZIONE 02 - SLIDER FOTOGRAFICO CONTINUO
+   Il set duplicato dal JS consente un loop senza stacchi.
+   ============================================================ */
+.food-gallery {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    touch-action: pan-y;
+}
+
+.food-gallery-track {
+    display: flex;
+    width: max-content;
+    max-width: none;
+    animation: alice-gallery-scroll 52s linear infinite;
+    will-change: transform;
+}
+
+.food-gallery-set {
+    display: flex;
+    flex: 0 0 auto;
+    gap: 22px;
+    padding-right: 22px;
+}
+
+.food-gallery .dish {
+    flex: 0 0 clamp(210px, 24vw, 360px);
+    width: clamp(210px, 24vw, 360px);
+    min-width: 0;
+    padding: 0;
+    transition-delay: 0ms;
+}
+
+.food-gallery .dish-photo {
+    aspect-ratio: 3 / 4;
+}
+
+.food-gallery .dish-index {
+    display: block;
+    padding-top: 13px;
+}
+
+.food-gallery:hover .food-gallery-track,
+.food-gallery:focus-within .food-gallery-track,
+body.modal-open .food-gallery-track {
+    animation-play-state: paused;
+}
+
+@keyframes alice-gallery-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 760px) {
+    .food-gallery-set {
+        gap: 14px;
+        padding-right: 14px;
+    }
+
+    .food-gallery .dish {
+        flex-basis: clamp(210px, 66vw, 300px);
+        width: clamp(210px, 66vw, 300px);
+    }
+
+    .food-gallery-track {
+        animation-duration: 46s;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .food-gallery {
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        touch-action: pan-x pan-y;
+    }
+
+    .food-gallery-track {
+        animation: none;
+        will-change: auto;
+    }
+
+    .food-gallery-set[aria-hidden="true"] {
+        display: none;
     }
 }
