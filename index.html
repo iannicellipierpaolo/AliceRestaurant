@@ -28,7 +28,7 @@
         />
         <meta
             property="og:image"
-            content="assets/alice-hero-poster.webp"
+            content="assets/alice-hero.png"
         />
         <title>Alice Restaurant — Lo Ionio, in prima fila</title>
         <link
@@ -39,18 +39,18 @@
         <link
             rel="preload"
             as="image"
-            href="assets/alice-hero-poster.webp"
+            href="assets/alice-hero.png"
         />
         <link
             rel="stylesheet"
-            href="style.css?v=20261109-hero-video"
+            href="style.css?v=20261109-hero-static"
         />
         <script
             src="config.js"
             defer
         ></script>
         <script
-            src="script.js?v=20261109-hero-video"
+            src="script.js?v=20261109-hero-static"
             defer
         ></script>
         <script src="startup.js"></script>
@@ -141,28 +141,18 @@
             <section
                 class="hero"
                 id="inizio"
-                aria-label="Il panorama di Trebisacce sul mare Ionio"
+                aria-label="Panorama serale di Trebisacce sul mare Ionio"
             >
                 <div class="hero-image-wrap">
-                    <video
-                        class="hero-video"
-                        autoplay
-                        muted
-                        loop
-                        playsinline
-                        preload="metadata"
-                        poster="assets/alice-hero-poster.webp"
-                        aria-label="Ripresa panoramica cinematografica sul mare"
-                    >
-                        <source
-                            src="assets/alice-hero-video.mp4"
-                            type="video/mp4"
-                        />
-                        <img
-                            src="assets/alice-hero-poster.webp"
-                            alt="Panorama sul mare di Alice Restaurant"
-                        />
-                    </video>
+                    <img
+                        class="hero-image"
+                        src="assets/alice-hero.png"
+                        width="1672"
+                        height="941"
+                        alt="Trebisacce all'ora blu, con il mare Ionio illuminato dalla luna e le luci calde del borgo."
+                        fetchpriority="high"
+                        decoding="async"
+                    />
                 </div>
             </section>
 

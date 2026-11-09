@@ -242,7 +242,7 @@ em {
     margin-top: var(--header-height);
     height: clamp(440px, 73svh, 900px);
     overflow: hidden;
-    background: #07538b;
+    background: #061e30;
 }
 
 .hero-image-wrap {
@@ -252,8 +252,7 @@ em {
     animation: panorama-enter 2.4s var(--ease) both;
 }
 
-.hero-image,
-.hero-video {
+.hero-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1380,8 +1379,7 @@ dialog[open] {
         min-height: 420px;
         max-height: 650px;
     }
-    .hero-image,
-.hero-video {
+    .hero-image {
         object-position: 10% center;
     }
     .location-strip {
@@ -1618,8 +1616,7 @@ dialog[open] {
         opacity: 1;
         transform: none;
     }
-    .hero-image,
-.hero-video {
+    .hero-image {
         transform: none !important;
     }
     .editorial-dialog[open] {
