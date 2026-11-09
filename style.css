@@ -272,6 +272,9 @@ em {
     }
 }
 
+
+/* FASCIA ORO SOTTO LA HERO */
+
 .location-strip {
     display: flex;
     justify-content: space-between;
@@ -279,9 +282,25 @@ em {
     gap: 20px;
     min-height: 78px;
     padding: 20px var(--gutter);
-    border-bottom: 1px solid #59423720;
-    color: var(--walnut);
+    border-bottom: 0;
+    background: var(--walnut);
+    color: var(--gold-light);
 }
+
+.location-dot {
+    width: 6px;
+    height: 6px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--navy);
+    box-shadow: 0 0 0 5px rgba(6, 30, 48, 0.10);
+}
+
+.location-strip a:hover {
+    color: var(--navy);
+    opacity: 0.72;
+}
+
 
 .location-strip p {
     display: flex;
@@ -1075,6 +1094,7 @@ dialog[open] {
 }
 
 .section-note strong {
+    color: var(--gold-light);
     font-weight: 700;
 }
 
