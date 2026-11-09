@@ -282,25 +282,9 @@ em {
     gap: 20px;
     min-height: 78px;
     padding: 20px var(--gutter);
-    border-bottom: 0;
-    background: var(--walnut);
-    color: var(--gold-light);
+    border-bottom: 1px solid #59423720;
+    color: var(--walnut);
 }
-
-.location-dot {
-    width: 6px;
-    height: 6px;
-    flex-shrink: 0;
-    border-radius: 50%;
-    background: var(--navy);
-    box-shadow: 0 0 0 5px rgba(6, 30, 48, 0.10);
-}
-
-.location-strip a:hover {
-    color: var(--navy);
-    opacity: 0.72;
-}
-
 
 .location-strip p {
     display: flex;
