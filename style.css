@@ -311,7 +311,7 @@ em {
         0 18px 42px rgba(0, 0, 0, 0.25);
     opacity: 0;
     transform: translateY(22px);
-    animation: hero-copy-enter 1.3s var(--ease) 2s forwards;
+    animation: hero-copy-enter 0.9s var(--ease) 0.8s forwards;
 }
 
 .hero-line {
