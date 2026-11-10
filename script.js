@@ -288,9 +288,8 @@
         }
     });
 
-    // FOTO HERO: immagine statica, nessuna logica video.
+    // FOTO HERO: parallasse senza interferire con la velatura e il testo.
     const hero = document.querySelector(".hero");
-    const heroImage = document.querySelector(".hero-image");
 
     const progress = document.querySelector(".scroll-progress");
     let frameRequested = false;
@@ -306,7 +305,7 @@
         header.classList.toggle("is-scrolled", scroll > 25);
 
         // Parallasse leggera soltanto su desktop.
-        if (heroImage && hero) {
+        if (hero) {
             if (
                 !motionPreference.matches &&
                 !mobileViewport.matches &&
@@ -314,10 +313,16 @@
             ) {
                 const displacement = Math.min(scroll * 0.12, 80);
 
-                heroImage.style.transform =
-                    `translateY(${displacement}px) scale(1.03)`;
+                hero.style.setProperty("--hero-shift", `${displacement}px`);
+                hero.style.setProperty("--hero-scale", "1.03");
             } else {
-                heroImage.style.transform = "none";
+                hero.style.setProperty("--hero-shift", "0px");
+                hero.style.setProperty(
+                    "--hero-scale",
+                    mobileViewport.matches || motionPreference.matches
+                        ? "1"
+                        : "1.03"
+                );
             }
         }
 
