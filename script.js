@@ -340,3 +340,48 @@
     motionPreference.addEventListener("change", requestScrollUpdate);
     updateScroll();
 })();
+/* ========================================
+   PREVENZIONE EMOJI APPLE
+======================================== */
+
+function forzaSimboliTestuali() {
+    const walker = document.createTreeWalker(
+        document.body,
+        NodeFilter.SHOW_TEXT
+    );
+
+    const nodi = [];
+
+    while (walker.nextNode()) {
+        const nodo = walker.currentNode;
+
+        if (
+            !nodo.parentElement ||
+            nodo.parentElement.closest(
+                "script, style, textarea, code, pre"
+            )
+        ) {
+            continue;
+        }
+
+        if (/[↗↑]/.test(nodo.nodeValue)) {
+            nodi.push(nodo);
+        }
+    }
+
+    nodi.forEach((nodo) => {
+        nodo.nodeValue = nodo.nodeValue.replace(
+            /([↗↑])(?!\uFE0E)/g,
+            "$1\uFE0E"
+        );
+    });
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener(
+        "DOMContentLoaded",
+        forzaSimboliTestuali
+    );
+} else {
+    forzaSimboliTestuali();
+}

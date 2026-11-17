@@ -1,3 +1,27 @@
+@font-face {
+    font-family: "Nunito Sans Local";
+    src: url("./font/NunitoSans.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 200 1000;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Gelasio Local";
+    src: url("./font/Gelasio.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Gelasio Local";
+    src: url("./font/Gelasio-Italic.ttf") format("truetype");
+    font-style: italic;
+    font-weight: 400 700;
+    font-display: swap;
+}
+
 :root {
     --sea: #007fa3;
     --sea-hover: #006b8a;
@@ -11,7 +35,7 @@
     --header-height: 88px;
     --gutter: clamp(24px, 5vw, 100px);
     --ease: cubic-bezier(0.22, 1, 0.36, 1);
-    --font: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    --font: "Avenir Next", "Nunito Sans Local", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     --hero-object-position: 50% 52%;
 }
 
@@ -89,7 +113,7 @@ h3 {
 }
 
 em {
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: Georgia, "Gelasio Local", "Times New Roman", serif;
     font-weight: 400;
 }
 
@@ -298,7 +322,7 @@ em {
     gap: 0.08em;
     max-width: 100%;
     color: #e8e0d2;
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: Georgia, "Gelasio Local", "Times New Roman", serif;
     font-size: clamp(38px, 5.5vw, 94px);
     font-style: italic;
     font-weight: 400;
@@ -1095,7 +1119,7 @@ dialog[open] {
 .editorial-dialog h2 {
     margin: 16px 0 24px;
     color: inherit;
-    font-family: Georgia, serif;
+    font-family: Georgia, "Gelasio Local", serif;
     font-size: clamp(30px, 5vw, 44px);
     font-weight: 400;
     line-height: 1.15;
@@ -1275,7 +1299,7 @@ dialog[open] {
 
 .demo-banner-copy p {
     margin: 10px 0;
-    font-family: Georgia, serif;
+    font-family: Georgia, "Gelasio Local", serif;
     font-size: clamp(22px, 3vw, 30px);
     line-height: 1.3;
 }
